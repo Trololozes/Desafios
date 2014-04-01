@@ -8,7 +8,7 @@ Vamo que vamo negrada! Desafio 1 vai ser fácil hein.
 
 Desafio 1: Pra entrar no espírito do PI o desafio dessa semana é simples, criar um Caesar Cipher.
 
-O que é isso?
+<b>O que é isso?</b>
 Um Caesar Cipher é um algorítmo de encriptação que usa um mapa de caracteres que troca a posição das letras no alfabeto de acordo uma chave numérica INT.
 
 Como assim?
