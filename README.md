@@ -6,21 +6,21 @@ Desafios semanais pra quebrar a cabeça /lol
 
 Vamo que vamo negrada! Desafio 1 vai ser fácil hein.
 
-<b>Desafio 1:</b> Pra entrar no espírito do PI o desafio dessa semana é simples, criar um Caesar Cipher.
+<b>Desafio 1:</b> Pra entrar no espírito do PI o desafio dessa semana é simples, criar um <b>Caesar Cipher</b>.
 
 <p><b>O que é isso?</b></p>
 Um Caesar Cipher é um algorítmo de encriptação que usa um mapa de caracteres que troca a posição das letras no alfabeto de acordo uma chave numérica INT.
 
 <p><b>Como assim?</b></p>
 
-Chave: 3
-Normal:  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Chave: 3 <br />
+Normal:  ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
 Cifrado: DEFGHIJKLMNOPQRSTUVWXYZABC
 
 <p>Para criptografar uma mensagem, deve-se simplesmente observar cada letra da mensagem na linha "Normal" e escrever a letra correspondente na linha "Cifrado". Para descriptografar, deve-se fazer o contrário.</p>
 
-Normal:  a ligeira raposa marrom saltou sobre o cachorro cansado
-Cifrado: D OLJHLUD UDSRVD PDUURP VDOWRX VREUH R FDFKRUUR FDQVDGR
+<b>Normal:</b>  A LIGEIRA RAPOSA MARROM SALTOU SOBRE O CACHORRO CANSADO<br />
+<b>Cifrado:</b> D OLJHLUD UDSRVD PDUURP VDOWRX VREUH R FDFKRUUR FDQVDGR
 
 <p>Este é bem simples, mas vc também pode fazer algo complexo usando a mesma noção, o problema dessa cifra é que como as letras são sempre as mesmas da pra decodificar mais fácil.</p>
 
