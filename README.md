@@ -14,15 +14,15 @@ Um Caesar Cipher é um algorítmo de encriptação que usa um mapa de caracteres
 <p><b>Como assim?</b></p>
 
 Chave: 3 <br />
-Normal:  ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
-Cifrado: DEFGHIJKLMNOPQRSTUVWXYZABC
+<b>Normal:</b>  ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+<b>Cifrado:</b> DEFGHIJKLMNOPQRSTUVWXYZABC
 
 <p>Para criptografar uma mensagem, deve-se simplesmente observar cada letra da mensagem na linha "Normal" e escrever a letra correspondente na linha "Cifrado". Para descriptografar, deve-se fazer o contrário.</p>
 
 <b>Normal:</b>  A LIGEIRA RAPOSA MARROM SALTOU SOBRE O CACHORRO CANSADO<br />
 <b>Cifrado:</b> D OLJHLUD UDSRVD PDUURP VDOWRX VREUH R FDFKRUUR FDQVDGR
 
-<p>Este é bem simples, mas vc também pode fazer algo complexo usando a mesma noção, o problema dessa cifra é que como as letras são sempre as mesmas da pra decodificar mais fácil.</p>
+<p>Este é bem simples, mas vc também pode fazer algo complexo usando a mesma noção. O problema dessa cifra é que como as letras são sempre as mesmas da pra decodificar mais fácil.</p>
 
 <p>Bora lá então galera!</p>
 
