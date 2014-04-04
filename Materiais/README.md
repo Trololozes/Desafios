@@ -1,53 +1,63 @@
 [Java Book](http://java2s.com/Book/Java/CatalogJava.htm) - The C Book, só que de Java
+
 [Java Index](http://www.roseindia.net/java/master-java/index.shtml) - Site com Referências Gerais de Java
+
 [C Basics](http://einstein.drexel.edu/courses/Comp_Phys/General/C_basics/) Referências Gerais em C
+
 [C FAQ](http://c-faq.com/questions.html) Respostas para perguntas gerais envolvendo C
+
 [C Tutorial](http://www.programiz.com/c-programming) - [C Tutorial Exemplos](http://www.programiz.com/c-programming/examples/) Tutorial básico e alguns exemplos em C
+
 [C the Hard Way](http://c.learncodethehardway.org/book/) - Livro ainda sendo escrito, recomendo
+
 [C Course](http://www.computerscienceforeveryone.com/Course_1/Unit_1/Lesson_1/) - Vídeo Aulas
+
 [Python the Hard Way](http://learnpythonthehardway.org/book/) - Mais um da Série Learn The Hard Way, para Python 2
+
 [How to Think Python](http://www.openbookproject.net/thinkcs/python/english3e/) - Python 3
+
 [Java Introduction](http://chortle.ccsu.edu/java5/index.html) - Introdução a Java
+
 [MIT Computer Science](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/) - Curso do MIT muito bom e usado por todo o mundo, gratuito.
+
 [C++](http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list) - Lista Gigante com os melhores livros para sair MANJANDO de C++
+
 [C# Video Aulas](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners) - Vídeo Aulas para iniciantes em C#
+
 [C/C++ Dicas](http://www.cprogramming.com/tips/) - Pequena lista com algumas dicas úteis em C/C++
 
 
----------------------------------------------------
 
 #Dicas e Truques
 
 ##[C] Trocar duas variáveis sem usar outra variável temporária
-  x ^= y;
-  y ^= y;
-  x ^= y;
+	x ^= y;
+	y ^= y;
+	x ^= y;
 
 Usa-se o *bitwise operator* XOR.
-
-
 
 
 ##[C] Calcular Fatorial
 
 Calcular fatoriais é um dos exemplos mais comuns em recursividade. O código é: 
 
-int fatorial(int i) {
-     if(i)
-          return i * fatorial(i-1);
-     return 1;
-}
+	int fatorial(int i) {
+	     if(i)
+	          return i * fatorial(i-1);
+	     return 1;
+	}
 
 O problema é que fatoriais ficam muito grandes muito rápido. Apenas 13(!) é tão grande que já da overflow em um int32. O melhor a se fazer é criar um vetor com os valores fatoriais:
 
-int fatorial(int i) {
-     if (i<0 || i>12) {
-          fprintf(stderr, "Fatorial muito grande\n");
-          exit(EXIT_FAILURE); 
-     }
-     static const int fatoriais[] = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600};
-     return fatoriais[i];
-}
+	int fatorial(int i) {
+	     if (i<0 || i>12) {
+	          fprintf(stderr, "Fatorial muito grande\n");
+	          exit(EXIT_FAILURE); 
+	     }
+	     static const int fatoriais[] = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600};
+	     return fatoriais[i];
+	}
 
 
 ##[C] %s na função printf para strings
@@ -70,19 +80,23 @@ Mas isso pode ser extremamente perigoso e pode deixar o seu programa vulnerável
 	print(select(2, math.modf(number)))
 
 Se o primeiro argumento é um número, select retorna todos os argumentos após esse número. Alguns exemplos:
+
 	print(select(1, 1, 2, 3)) --> 1 2 3
 	print(select(2, 1, 2, 3)) --> 2 3
 	print(select(3, 1, 2, 3)) --> 3
 
 Ou:
-	print((math.modf(number)))
+
+	number = 5.7
+	print((math.modf(number))) --> 5
 
 
 ##[Lua] Trocar valor das variáveis
 
 **Parsing order**
-x, x = 1, 2
-print(x) --> 1
+
+	x, x = 1, 2
+	print(x) --> 1
 
 Lua parece designar varáveis da direita para esquerda. Agora se declararmos elas localmente: 
 
@@ -108,7 +122,7 @@ Há um jeito melhor. Strings saõ geradas com uma metatabela automáticamente qu
 
 	print(("Hello, %s!"):format("yournamehere"))
 
-Você pode fazer isso para todas as funções da biblioteca string, ao invés de fazer string.sub(p,1,1) você pode fazer simplesmente p:sub(1,1)
+Você pode fazer isso para todas as funções da biblioteca string, ao invés de fazer string.sub(p,1,1) você pode fazer  p:sub(1,1)
 
 
 
