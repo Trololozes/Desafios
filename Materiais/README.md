@@ -27,7 +27,6 @@
 [C/C++ Dicas](http://www.cprogramming.com/tips/) - Pequena lista com algumas dicas úteis em C/C++
 
 
----------------------------------------------------
 
 #Dicas e Truques
 
