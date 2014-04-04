@@ -70,6 +70,7 @@ Organização galera! Vai subir seu código? Ótimo, faça da seguinte maneira:
 #**Trivia**
 
 **Cheat Sheets**
+
 [C](http://www.digilife.be/quickreferences/QRC/C%20Reference%20Card%20%28ANSI%29%202.2.pdf "C Cheat Sheet")
 
 [Lua](http://www.ewald-arnold.de/lua/lua-apiref.pdf "Lua C API Cheat Sheet")
