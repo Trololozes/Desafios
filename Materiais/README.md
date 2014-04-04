@@ -80,6 +80,7 @@ Mas isso pode ser extremamente perigoso e pode deixar o seu programa vulnerável
 	print(select(2, math.modf(number)))
 
 Se o primeiro argumento é um número, select retorna todos os argumentos após esse número. Alguns exemplos:
+
 	print(select(1, 1, 2, 3)) --> 1 2 3
 	print(select(2, 1, 2, 3)) --> 2 3
 	print(select(3, 1, 2, 3)) --> 3
