@@ -12,6 +12,8 @@ Para uma boa explicação e exemplos dos comandos do git e seus modos de uso, se
 
 agora, a razao pela qual estamos aqui!
 
+Cheat Sheet - [Here](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.svg "Cheat Sheet")
+
 
 Desafios
 ========
