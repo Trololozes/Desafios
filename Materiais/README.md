@@ -85,14 +85,16 @@ Se o primeiro argumento é um número, select retorna todos os argumentos após 
 	print(select(3, 1, 2, 3)) --> 3
 
 Ou:
-	print((math.modf(number)))
+	number = 6.7
+	print((math.modf(number))) --> 6
 
 
 ##[Lua] Trocar valor das variáveis
 
 **Parsing order**
-x, x = 1, 2
-print(x) --> 1
+
+	x, x = 1, 2
+	print(x) --> 1
 
 Lua parece designar varáveis da direita para esquerda. Agora se declararmos elas localmente: 
 
@@ -118,7 +120,7 @@ Há um jeito melhor. Strings saõ geradas com uma metatabela automáticamente qu
 
 	print(("Hello, %s!"):format("yournamehere"))
 
-Você pode fazer isso para todas as funções da biblioteca string, ao invés de fazer string.sub(p,1,1) você pode fazer simplesmente p:sub(1,1)
+Você pode fazer isso para todas as funções da biblioteca string, ao invés de fazer string.sub(p,1,1) você pode fazer  p:sub(1,1)
 
 
 
