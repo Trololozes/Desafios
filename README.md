@@ -63,3 +63,22 @@ Organização galera! Vai subir seu código? Ótimo, faça da seguinte maneira:
 
 
 [git]: http://git-scm.com/book/pt-br/Git-Essencial-Obtendo-um-Reposit%C3%B3rio-Git
+
+
+
+--------------------------------------------------------------------------
+#**Trivia**
+
+**Cheat Sheets**
+[C](http://www.digilife.be/quickreferences/QRC/C%20Reference%20Card%20%28ANSI%29%202.2.pdf "C Cheat Sheet")
+
+[Lua](http://www.ewald-arnold.de/lua/lua-apiref.pdf "Lua C API Cheat Sheet")
+
+[Java GUI](http://refcardz.dzone.com/refcardz/getting-started-java-gui "Java GUI Cheat Sheet")
+
+[Java](http://mindprod.com/jgloss/jcheat.html "Java Core Cheat Sheet")
+
+[Markdown](http://warpedvisions.org/projects/markdown-cheat-sheet.md "Markdown Cheat Sheet") - Editar arquivos .md
+
+[ASCII](http://www.petefreitag.com/cheatsheets/ascii-codes/ "Ascii Cheat Sheet")
+
