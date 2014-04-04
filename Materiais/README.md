@@ -31,9 +31,9 @@
 #Dicas e Truques
 
 ##[C] Trocar duas variáveis sem usar outra variável temporária
-  x ^= y;
-  y ^= y;
-  x ^= y;
+	x ^= y;
+	y ^= y;
+	x ^= y;
 
 Usa-se o *bitwise operator* XOR.
 
@@ -42,22 +42,22 @@ Usa-se o *bitwise operator* XOR.
 
 Calcular fatoriais é um dos exemplos mais comuns em recursividade. O código é: 
 
-int fatorial(int i) {
-     if(i)
-          return i * fatorial(i-1);
-     return 1;
-}
+	int fatorial(int i) {
+	     if(i)
+	          return i * fatorial(i-1);
+	     return 1;
+	}
 
 O problema é que fatoriais ficam muito grandes muito rápido. Apenas 13(!) é tão grande que já da overflow em um int32. O melhor a se fazer é criar um vetor com os valores fatoriais:
 
-int fatorial(int i) {
-     if (i<0 || i>12) {
-          fprintf(stderr, "Fatorial muito grande\n");
-          exit(EXIT_FAILURE); 
-     }
-     static const int fatoriais[] = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600};
-     return fatoriais[i];
-}
+	int fatorial(int i) {
+	     if (i<0 || i>12) {
+	          fprintf(stderr, "Fatorial muito grande\n");
+	          exit(EXIT_FAILURE); 
+	     }
+	     static const int fatoriais[] = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600};
+	     return fatoriais[i];
+	}
 
 
 ##[C] %s na função printf para strings
