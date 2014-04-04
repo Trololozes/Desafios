@@ -86,8 +86,8 @@ Se o primeiro argumento é um número, select retorna todos os argumentos após 
 	print(select(3, 1, 2, 3)) --> 3
 
 Ou:
-	number = 6.7
-	print((math.modf(number))) --> 6
+	number = 5.7
+	print((math.modf(number))) --> 5
 
 
 ##[Lua] Trocar valor das variáveis
