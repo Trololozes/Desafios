@@ -1,16 +1,29 @@
 [Java Book](http://java2s.com/Book/Java/CatalogJava.htm) - The C Book, só que de Java
+
 [Java Index](http://www.roseindia.net/java/master-java/index.shtml) - Site com Referências Gerais de Java
+
 [C Basics](http://einstein.drexel.edu/courses/Comp_Phys/General/C_basics/) Referências Gerais em C
+
 [C FAQ](http://c-faq.com/questions.html) Respostas para perguntas gerais envolvendo C
+
 [C Tutorial](http://www.programiz.com/c-programming) - [C Tutorial Exemplos](http://www.programiz.com/c-programming/examples/) Tutorial básico e alguns exemplos em C
+
 [C the Hard Way](http://c.learncodethehardway.org/book/) - Livro ainda sendo escrito, recomendo
+
 [C Course](http://www.computerscienceforeveryone.com/Course_1/Unit_1/Lesson_1/) - Vídeo Aulas
+
 [Python the Hard Way](http://learnpythonthehardway.org/book/) - Mais um da Série Learn The Hard Way, para Python 2
+
 [How to Think Python](http://www.openbookproject.net/thinkcs/python/english3e/) - Python 3
+
 [Java Introduction](http://chortle.ccsu.edu/java5/index.html) - Introdução a Java
+
 [MIT Computer Science](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/) - Curso do MIT muito bom e usado por todo o mundo, gratuito.
+
 [C++](http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list) - Lista Gigante com os melhores livros para sair MANJANDO de C++
+
 [C# Video Aulas](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners) - Vídeo Aulas para iniciantes em C#
+
 [C/C++ Dicas](http://www.cprogramming.com/tips/) - Pequena lista com algumas dicas úteis em C/C++
 
 
@@ -24,8 +37,6 @@
   x ^= y;
 
 Usa-se o *bitwise operator* XOR.
-
-
 
 
 ##[C] Calcular Fatorial
