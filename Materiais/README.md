@@ -1,36 +1,42 @@
-[Java Book](http://java2s.com/Book/Java/CatalogJava.htm) - The C Book, só que de Java
+# Links
 
-[Java Index](http://www.roseindia.net/java/master-java/index.shtml) - Site com Referências Gerais de Java
+**Java**
 
-[C Basics](http://einstein.drexel.edu/courses/Comp_Phys/General/C_basics/) Referências Gerais em C
+[Java Book](http://java2s.com/Book/Java/CatalogJava.htm) - The C Book, só que de Java  
+[Java Index](http://www.roseindia.net/java/master-java/index.shtml) - Site com Referências Gerais de Java  
+[Java Introduction](http://chortle.ccsu.edu/java5/index.html) - Introdução a Java
 
-[C FAQ](http://c-faq.com/questions.html) Respostas para perguntas gerais envolvendo C
+**C/C++/C#**
 
-[C Tutorial](http://www.programiz.com/c-programming) - [C Tutorial Exemplos](http://www.programiz.com/c-programming/examples/) Tutorial básico e alguns exemplos em C
+[C FAQ](http://c-faq.com/questions.html) - Respostas para perguntas gerais envolvendo C  
+[C Basics](http://einstein.drexel.edu/courses/Comp_Phys/General/C_basics/) - Referências Gerais em C  
+[C Course](http://www.computerscienceforeveryone.com/Course_1/Unit_1/Lesson_1/) - Vídeo Aulas  
+[C Tutorial](http://www.programiz.com/c-programming)  
+[C Tutorial-Exemplos](http://www.programiz.com/c-programming/examples/) - Tutorial básico e alguns exemplos em C  
+[C the Hard Way](http://c.learncodethehardway.org/book/) - Livro ainda sendo escrito, recomendo  
+[C++](http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list) - Lista Gigante com os melhores livros para sair MANJANDO de C++  
+[C/C++ Dicas](http://www.cprogramming.com/tips/) - Pequena lista com algumas dicas úteis em C/C++  
+[C# Video Aulas](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners) - Vídeo Aulas para iniciantes em C#  
 
-[C the Hard Way](http://c.learncodethehardway.org/book/) - Livro ainda sendo escrito, recomendo
+**Python**
 
-[C Course](http://www.computerscienceforeveryone.com/Course_1/Unit_1/Lesson_1/) - Vídeo Aulas
-
-[Python the Hard Way](http://learnpythonthehardway.org/book/) - Mais um da Série Learn The Hard Way, para Python 2
-
+[Python the Hard Way](http://learnpythonthehardway.org/book/) - Mais um da Série Learn The Hard Way, para Python 2  
 [How to Think Python](http://www.openbookproject.net/thinkcs/python/english3e/) - Python 3
 
-[Java Introduction](http://chortle.ccsu.edu/java5/index.html) - Introdução a Java
+**Curso online**
 
 [MIT Computer Science](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/) - Curso do MIT muito bom e usado por todo o mundo, gratuito.
 
-[C++](http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list) - Lista Gigante com os melhores livros para sair MANJANDO de C++
+**Licenças de Software**
 
-[C# Video Aulas](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners) - Vídeo Aulas para iniciantes em C#
+[Open Source](http://opensource.org/licenses)  
+[WTFPL](http://www.wtfpl.net/about/)  
+[Beerware](https://fedoraproject.org/wiki/Licensing/Beerware)
 
-[C/C++ Dicas](http://www.cprogramming.com/tips/) - Pequena lista com algumas dicas úteis em C/C++
 
+# Dicas e Truques
 
-
-#Dicas e Truques
-
-##[C] Trocar duas variáveis sem usar outra variável temporária
+## [C] Trocar duas variáveis sem usar outra variável temporária
 	x ^= y;
 	y ^= y;
 	x ^= y;
@@ -38,7 +44,7 @@
 Usa-se o *bitwise operator* XOR.
 
 
-##[C] Calcular Fatorial
+## [C] Calcular Fatorial
 
 Calcular fatoriais é um dos exemplos mais comuns em recursividade. O código é: 
 
@@ -60,7 +66,7 @@ O problema é que fatoriais ficam muito grandes muito rápido. Apenas 13(!) é t
 	}
 
 
-##[C] %s na função printf para strings
+## [C] %s na função printf para strings
 
 Já que printf() recebe strings como argumentos, talvez você ache que não precisa usar %s quando for mostrar uma string.
 
@@ -75,7 +81,7 @@ Mas isso pode ser extremamente perigoso e pode deixar o seu programa vulnerável
 	char string[12]="Hello World";
 	printf("%s", string);
 
-##[Lua] Parte Inteira de um número
+## [Lua] Parte Inteira de um número
 
 	print(select(2, math.modf(number)))
 
@@ -91,7 +97,7 @@ Ou:
 	print((math.modf(number))) --> 5
 
 
-##[Lua] Trocar valor das variáveis
+## [Lua] Trocar valor das variáveis
 
 **Parsing order**
 
@@ -111,7 +117,7 @@ Variáveis Locais parecem ser designadas da esquerda para direita. Um ponto not�
 
 A primeiro coisa que Lua faz é designar 1 para a e 2 para b. Então na segunda declaração Lua descobre o que b(2) é e o que a(1) é. Então designa novamente a e b.
 
-##[Lua]
+## [Lua]
 
 Aqui está um código para formatar uma string com o nome de uma pessoa:
 
