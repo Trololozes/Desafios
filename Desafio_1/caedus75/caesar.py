@@ -2,10 +2,10 @@
 
 frase = input("Digite a frase: ")
 cifra = []
-key = int(input("Digite a chave numerica:"))
+key = int(input("Digite a chave numerica: "))
 
 #   garante um valor valido para a chave numerica
-while( key > 25 ):
+while key > 25:
     key -= 26
 
 #   usa a frase como uma sequencia de caracteres.
@@ -15,7 +15,7 @@ while( key > 25 ):
 #   chave. O novo valor é transformado de volta em caracter e adicionado a lista
 #   de caracteres.
 for char in frase:
-    if( char == ' ' ):
+    if char == ' ':
         cifra.append(char)
         continue
     cifra.append(chr(ord(char)+key))
