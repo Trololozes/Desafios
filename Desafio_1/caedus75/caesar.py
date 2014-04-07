@@ -3,7 +3,14 @@
 frase = input("Digite a frase: ")
 cifra = []
 
-#   garante que a chave numerica seja realmente um numero
+#   Lista de caracteres que serao ignorados na criptografia.
+ign = ['Á', 'á', 'Â', 'â', 'À', 'à', 'Å', 'å', 'Ã', 'ã', 'Ä', 'ä',\
+       'É', 'é', 'Ê', 'ê', 'È', 'è', 'Ë', 'ë', 'Í', 'í', 'Î', 'î',\
+       'Ì', 'ì', 'Ï', 'ï', 'Ó', 'ó', 'Ô', 'ô', 'Ò', 'ò', 'Õ', 'õ',\
+       'Ö', 'ö', 'Ú', 'ú', 'Û', 'û', 'Ù', 'ù', 'Ü', 'ü', 'Ç', 'ç',\
+       'Ñ', 'ñ', '\"', '\'', '®', '©', '<', '>', '&', ' ']
+
+#   Garante que a chave numerica seja realmente um numero
 while True:
     try:
         key = int(input("Digite a chave numerica: "))
@@ -12,28 +19,29 @@ while True:
     else:
         break
 
-#   sempre 'key > 0'. Negativo fica para o caminho inverso, quando for
+#   Sempre 'key > 0'. Negativo fica para o caminho inverso, quando for
 #   implementado.
 if key < 0:
     key *= -1
 
-#   garante um valor valido para a chave numerica
+#   Garante um valor valido para a chave numerica
 while key > 25:
     key -= 26
 
-#   usa a frase como uma sequencia de caracteres.
-#   a cada caracter verifica se é um espaco, se sim so adiciona a uma lista de
+#   Usa a frase como uma sequencia de caracteres.
+#   a cada caracter verifica se está presente na lista de caracteres a serem
+#   ignorados (ign), se sim so adiciona a uma lista de caracteres sem fazer mais
+#   nada.
+#   Se nao, transforma o caracter no seu valor numerico unicode e soma a chave.
+#   O novo valor é transformado de volta em caracter e adicionado a lista de
 #   caracteres.
-#   se nao, transforma o caracter no seu valor numerico da tabela ascii e soma a
-#   chave. O novo valor é transformado de volta em caracter e adicionado a lista
-#   de caracteres.
 for char in frase:
-    if char == ' ':
+    if char in ign:
         cifra.append(char)
         continue
     cifra.append(chr(ord(char)+key))
 
-#   cada elemento da lista é unido com um espaco vazio entre si, tecninca
+#   Cada elemento da lista é unido com um espaco vazio entre si, tecninca
 #   gatinho para fazer uma string a partir de uma lista de caracteres.
 cifra = ''.join(cifra)
 print(cifra)
