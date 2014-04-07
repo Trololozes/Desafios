@@ -12,6 +12,11 @@ while True:
     else:
         break
 
+#   sempre 'key > 0'. Negativo fica para o caminho inverso, quando for
+#   implementado.
+if key < 0:
+    key *= -1
+
 #   garante um valor valido para a chave numerica
 while key > 25:
     key -= 26
