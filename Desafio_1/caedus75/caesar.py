@@ -2,7 +2,15 @@
 
 frase = input("Digite a frase: ")
 cifra = []
-key = int(input("Digite a chave numerica: "))
+
+#   garante que a chave numerica seja realmente um numero
+while True:
+    try:
+        key = int(input("Digite a chave numerica: "))
+    except ValueError:
+        print("Erro, chave inválida")
+    else:
+        break
 
 #   garante um valor valido para a chave numerica
 while key > 25:
