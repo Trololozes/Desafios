@@ -16,14 +16,17 @@ int main(void){
     printf("Digite a chave numerica: ");
     scanf("%d", &key);
 
+/*  Sempre 'key > 0'. Negativo fica para o cominho inverso, quando for
+ *  implementado.
+ */
+    if( key < 0 )
+        key *= -1;
+
 /*  Loop para transformar a chave numerica de um possivel numero gigante para
  *  um valor dentro dos limites do alfabeto [0-25]
  */
     while( key > 25 )
         key -= 26;
-
-/*  Para descriptografar, fazer a chave negativa e continuar com o processamento
- */
 
 /*  This is where the magic happens */
     do{
