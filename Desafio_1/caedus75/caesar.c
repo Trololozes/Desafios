@@ -8,13 +8,14 @@
 void input(char*);
 
 int main(void){
-    char frase[50], ch;
+    char frase[50], keyword[5], ch;
     int key, c = 0;
 
     printf("Digite a frase: ");
     input(frase);
     printf("Digite a chave numerica: ");
-    scanf("%d", &key);
+    input(keyword);
+    key = atoi(keyword);
 
 /*  Sempre 'key > 0'. Negativo fica para o cominho inverso, quando for
  *  implementado.
