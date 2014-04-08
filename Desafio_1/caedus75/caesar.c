@@ -16,21 +16,21 @@ int main(void){
     printf("Digite a chave numerica: ");
     scanf("%d", &key);
 
-/*  loop para transformar a chave numerica de um possivel numero gigante para
+/*  Loop para transformar a chave numerica de um possivel numero gigante para
  *  um valor dentro dos limites do alfabeto [0-25]
  */
     while( key > 25 )
         key -= 26;
 
-/*  para descriptografar, fazer a chave negativa e continuar com o processamento
+/*  Para descriptografar, fazer a chave negativa e continuar com o processamento
  */
 
 /*  This is where the magic happens */
     do{
         ch = frase[c];
-/*  verifica se o caracter é uma letra [A-Z] [a-z]
- *  caso nao seja uma letra, pula para o proximo caracter
- *  essa implementacao ignora letras acentuadas!
+/*  Verifica se o caracter é uma letra [A-Z] [a-z]
+ *  caso nao seja uma letra, pula para o próximo caractere
+ *  essa implementação ignora letras acentuadas!
  */
         if( (ch > 64 && ch < 91) || (ch > 96 && ch < 123) ){
             ch += key;
@@ -41,12 +41,12 @@ int main(void){
         c++;
     } while( ch != 0 );
 
-/*  imprime a frase cifrada na tela */
+/*  Imprime a frase cifrada na tela */
     printf(">>> %s\n", frase);
     exit(EXIT_SUCCESS);
 }
 
-/*  funcao gatinho!! the one and only!! */
+/*  Função gatinho!! the one and only!! */
 void input(char *txt){
     char tmp;
 
