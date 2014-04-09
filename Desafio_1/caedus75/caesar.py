@@ -13,16 +13,11 @@ ign = ['Á', 'á', 'Â', 'â', 'À', 'à', 'Å', 'å', 'Ã', 'ã', 'Ä', 'ä',\
 #   Garante que a chave numerica seja realmente um numero
 while True:
     try:
-        key = int(input("Digite a chave numerica: "))
+        key = abs(int(input("Digite a chave numerica: ")))
     except ValueError:
         print("Erro, chave inválida")
     else:
         break
-
-#   Sempre 'key > 0'. Negativo fica para o caminho inverso, quando for
-#   implementado.
-if key < 0:
-    key *= -1
 
 #   Garante um valor valido para a chave numerica
 while key > 25:
