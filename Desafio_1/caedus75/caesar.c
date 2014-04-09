@@ -15,13 +15,7 @@ int main(void){
     input(frase);
     printf("Digite a chave numerica: ");
     input(keyword);
-    key = atoi(keyword);
-
-/*  Sempre 'key > 0'. Negativo fica para o cominho inverso, quando for
- *  implementado.
- */
-    if( key < 0 )
-        key *= -1;
+    key = abs(atoi(keyword));
 
 /*  Loop para transformar a chave numerica de um possivel numero gigante para
  *  um valor dentro dos limites do alfabeto [0-25]
