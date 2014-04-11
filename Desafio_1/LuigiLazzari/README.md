@@ -4,6 +4,7 @@ Caesar_Cipher
 Pra rodar vc vai precisar ter Lua 5.1 instalado no seu pc, ou vc pode usar a versão de testes 'caesar_cipher_demo' no site: [Lua Demo](http://www.lua.org/demo.html)
 Só copiar e colar o código e dar um Run pra vc ver o resultado.
 
+#Rodando a Demo:
 
 altere a frase em:
 
@@ -13,7 +14,7 @@ ache no fim do código:
 
 	shift = 3
 	
-essa é a chave. Altere a gosto e veja a mágica acontecer
+Essa é a chave. Altere a gosto e veja a mágica acontecer
 
 
 Qnd eu chegar em casa mando os scripts necessários pra criar um executável só com lua. Recomendo instalarem lua 5.1 pq a 5.2 não tem disponibilidade de muitas bibliotecas.
