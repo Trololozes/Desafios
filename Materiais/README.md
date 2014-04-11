@@ -18,6 +18,10 @@
 [C/C++ Dicas](http://www.cprogramming.com/tips/) - Pequena lista com algumas dicas úteis em C/C++  
 [C# Video Aulas](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners) - Vídeo Aulas para iniciantes em C#  
 
+**GDB**
+
+[GNU Debugger Tutorial](http://www.unknownroad.com/rtfm/gdbtut/gdbtoc.html)
+
 **Python**
 
 [Python the Hard Way](http://learnpythonthehardway.org/book/) - Mais um da Série Learn The Hard Way, para Python 2  
