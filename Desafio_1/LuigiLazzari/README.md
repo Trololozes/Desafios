@@ -16,7 +16,9 @@ ache no fim do código:
 	
 Essa é a chave. Altere a gosto e veja a mágica acontecer
 
-#Pra rodar o arquivo baixe a versão lua 5.1 que vem com o SciTe que é um editor que compila lua.
+#Versão completa
+
+Pra rodar o arquivo baixe a versão lua 5.1 que vem com o SciTe que é um editor que compila lua.
 
 Qnd eu chegar em casa mando os scripts necessários pra criar um executável só com lua. Recomendo instalarem lua 5.1 pq a 5.2 não tem disponibilidade de muitas bibliotecas.
 
