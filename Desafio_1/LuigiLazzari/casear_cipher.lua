@@ -1,5 +1,5 @@
 function Demo() -- Gera uma sequencia randomicamente >:}
-charset = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" -- quais caracteres farão parte da sequencia
+charset = "@#&ªº°0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" -- quais caracteres farão parte da sequencia
    local value = "" -- inicializa a string a ser gerada
       math.randomseed(os.time())	-- seed do random, melhor forma de ser realmente random.
       for i = 1, math.random(16, 40) do
@@ -61,15 +61,16 @@ end
 
 
 function read()
-    io.write("Digite o nome do arquivo em que a mágica vai ocorrer. (Com extensão. E.g. MeuArquivo.txt)")
-    local filename = io.read()
-    local f = io.open(filename, "r")
-    if f == nil then
-      print ("Arquivo ta cagado.")
-    else 
-      local content = f:read("*all")
-      f:close()
-    end
+-- Digite o nome do arquivo aqui
+	local p = "."
+	config = { filename = "test", -- digite o nome do arquivo
+			   extensao = p .. "txt"} -- digite a extensão
+
+	x = config.filename .. config.extensao  -- coloque aqui o nome do arquivo
+	print(x)
+    local f = io.open(x, "r")
+    local content = f:read("*all")
+    f:close()
     return content
 end
 
@@ -78,20 +79,20 @@ end
 do
 	local input = read()
 	io.write("Digite o shift: ")
-	local shift = io.read() -- if err?
+	local shift = io.read() -- como lidar com error check com io.read()?
 
 	local e = caesar(input, shift)
 	local d = decrypt(e, shift)
 
 	local f = io.open("crypt.txt", "w") -- salva arquivo critografado, se não existir, cria um
-  local x = f:write(e)
-  f:close()
+    local x = f:write(e)
+    f:close()
 
 	print("Texto Original: ", input) -- para testes
 	print("Texto criptografado: ", e) -- para testes
 
 	local fp = io.open("descrypt.txt", "w") --salva arquivo descriptografado, se não existir, cria um
-  local z = fp:write(d)
-  fp:close()
+    local z = fp:write(d)
+    fp:close()
 	print("Texto descriptografado: ", d) -- para testes
 end

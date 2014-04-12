@@ -19,6 +19,8 @@
 [C/C++ Dicas](http://www.cprogramming.com/tips/) - Pequena lista com algumas dicas úteis em C/C++  
 [C# Video Aulas](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners) - Vídeo Aulas para iniciantes em C#  
 
+**Lua**
+[Lua Tutoriais](http://www.dev-hq.net/lua/) - Tuts Lua Video
 **GDB**
 
 [GNU Debugger Tutorial](http://www.unknownroad.com/rtfm/gdbtut/gdbtoc.html)
