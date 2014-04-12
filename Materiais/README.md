@@ -8,6 +8,7 @@
 
 **C/C++/C#**
 
+[Mundo C](https://fiorix.files.wordpress.com/2014/04/o-fantc3a1stico-mundo-da-linguagem-c.pdf) - Totalmente em português!
 [C FAQ](http://c-faq.com/questions.html) - Respostas para perguntas gerais envolvendo C  
 [C Basics](http://einstein.drexel.edu/courses/Comp_Phys/General/C_basics/) - Referências Gerais em C  
 [C Course](http://www.computerscienceforeveryone.com/Course_1/Unit_1/Lesson_1/) - Vídeo Aulas  
