@@ -8,7 +8,7 @@
 
 **C/C++/C#**
 
-[Mundo C](https://fiorix.files.wordpress.com/2014/04/o-fantc3a1stico-mundo-da-linguagem-c.pdf) - Totalmente em português!
+[Mundo C](https://fiorix.files.wordpress.com/2014/04/o-fantc3a1stico-mundo-da-linguagem-c.pdf) - Totalmente em português!  
 [C FAQ](http://c-faq.com/questions.html) - Respostas para perguntas gerais envolvendo C  
 [C Basics](http://einstein.drexel.edu/courses/Comp_Phys/General/C_basics/) - Referências Gerais em C  
 [C Course](http://www.computerscienceforeveryone.com/Course_1/Unit_1/Lesson_1/) - Vídeo Aulas  
@@ -19,11 +19,14 @@
 [C/C++ Dicas](http://www.cprogramming.com/tips/) - Pequena lista com algumas dicas úteis em C/C++  
 [C# Video Aulas](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners) - Vídeo Aulas para iniciantes em C#  
 
-**Lua**
-[Lua Tutoriais](http://www.dev-hq.net/lua/) - Tuts Lua Video
 **GDB**
 
 [GNU Debugger Tutorial](http://www.unknownroad.com/rtfm/gdbtut/gdbtoc.html)
+
+**Lua**
+
+[Lua Tutoriais](http://www.dev-hq.net/lua/) - Tuts Lua Video
+
 
 **Python**
 
