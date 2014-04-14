@@ -14,7 +14,8 @@ tables = {
 
 for i=1,3 do -- k=1, 3 pq é o número de tabelas em tables
     for j=1,9 do 
-        tables[i][j]={0,0,0,0,0,0,0,0,0} -- colocar 0's em cada uma das tabelas em tables para evitar nils. Cada tabela tem 9 elementos :D 
+        tables[i][j]={0,0,0,0,0,0,0,0,0} --[[ colocar 0's em cada uma das tabelas em tables para evitar nils.
+                                              Cada tabela tem 9 elementos :D ]]--
     end
 end 
 
