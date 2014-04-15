@@ -10,9 +10,3 @@ Deve funcionar no Windows, não testei.
 O que pode dar pau é o caractere '\n' no Windows ser 2 bytes. Os *\#defines*
 devem resolver esse problema, mas eu não rodei pra ver se minha suposição
 procede! xD
-
-
-
-- - - 
-
-Yep, falta documentar o código! Working on that!!
