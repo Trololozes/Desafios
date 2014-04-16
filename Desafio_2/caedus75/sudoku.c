@@ -69,7 +69,6 @@ int main(int argc, char *argv[]){
                 matrix[ln][cl] = line[cl*2];
             }
             if( ! (stt = lineck(&matrix[ln][0])) ){
-                stt = 0;
                 break;
             }
             ln++;
