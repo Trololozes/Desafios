@@ -64,7 +64,7 @@ int main(int argc, char *argv[]){
     fgets(head, sizeof head, sudoku);
     it = atoi(head);
     while( c < it ){
-        while( (fgets(line, sizeof line, sudoku)) && ln < 9 ){
+        while( ln < 9 && (fgets(line, sizeof line, sudoku)) ){
             for( cl = 0; line[cl*2] != 0; cl++ ){
                 matrix[ln][cl] = line[cl*2];
             }
@@ -75,7 +75,8 @@ int main(int argc, char *argv[]){
         }
         printf("Resultado %d\n%s\n\n", c+1,\
         ( stt && colnck(&matrix[0][0]) && qdrtck(&matrix[0][0]) ) ? "SIM" : "NAO");
-        fseek(sudoku, get_offset(it, c), SEEK_SET);
+        if( ln < 9 )
+            fseek(sudoku, get_offset(it, c), SEEK_SET);
         ln = 0;
         c++;
     }
