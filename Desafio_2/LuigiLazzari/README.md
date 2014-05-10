@@ -20,8 +20,7 @@ Altere a grade no início:
 
 
 
-## Versão completa
-Pra rodar o arquivo baixe a versão lua 5.1 que vem com o SciTe que é um editor que compila lua.
-
+## Incompleto, shame
+Não fiz ler diversos jogos de sudoku :/
 
 ## Não tá pronto :~

@@ -1,27 +1,36 @@
-sudo="1 2 3 4 5 6 7 8 9" ..
-     "4 5 6 7 8 9 1 2 3" ..
-     "7 8 9 1 2 3 4 5 6" ..
-     "8 9 1 2 3 4 5 6 7" ..
-     "2 3 4 5 6 7 8 9 1" ..
-     "5 6 7 8 9 1 2 3 4" ..
-     "6 7 8 9 1 2 3 4 5" ..
-     "9 1 2 3 4 5 6 7 8" ..
-     "3 4 5 6 7 8 9 1 2" --deixando bonito para testes, inicializando o sudoku com um que é válido
+sudoku = " 1 2 3 4 5 6 7 8 9 " ..
+         " 4 5 6 7 8 9 1 2 3 " ..
+         " 7 8 9 1 2 3 4 5 6 " ..
+         " 8 9 1 2 3 4 5 6 7 " ..
+         " 2 3 4 5 6 7 8 9 1 " ..
+         " 5 6 7 8 9 1 2 3 4 " ..
+         " 6 7 8 9 1 2 3 4 5 " ..
+         " 9 1 2 3 4 5 6 7 8 " ..
+         " 3 4 5 6 7 8 9 1 2 " --deixando bonito para testes, inicializando o sudoku com um que é válido
+sudoku = sudoku:gsub(" ", ""); -- tira espaços /fail
 
-tables = {
-    {}, {}, {} -- inicializando 1 tabela para linhas, colunas e para cada grade 3x3, respectivamente
-} 
+tables = {                 -- checando array, 1=linha, 2=coluna, 3=quadrantes
+            {}, {}, {}
+         } 
 
-for i=1,3 do -- k=1, 3 pq é o número de tabelas em tables
-    for j=1,9 do 
-        tables[i][j]={0,0,0,0,0,0,0,0,0} --[[ colocar 0's em cada uma das tabelas em tables para evitar nils.
-                                              Cada tabela tem 9 elementos :D ]]--
-    end
+for k = 1, 3 do
+    for l = 1, 9 do 
+        tables[k][l] = {0, 0, 0, 0, 0, 0, 0, 0, 0} -- enche o array com 0s (só pra não ter nils)
+    end 
 end 
 
-for i=1,81 do -- loop por todos os números
-    n=tonumber(sudo:sub(i,i):match'%d') --[[ pega o caractere, checa se é um número com match'%d', 
-                                             e converte para número com sub(k,k), pq está td inicializado como string. ]]--
-    if n then
-
-      --conta foda a ser implementada hu3
+for k=1, 81 do -- loop por todas as posições
+    number = tonumber(sudoku:sub(k,k):match'%d') -- pega o caracter, checa se é um número e converte pra número (pq está como string)
+    if number then
+        crazy = {math.floor((k-1)/9)+1,(k-1)%9+1} -- Pega o numero da linha e da coluna
+        crazy[3] = math.floor((crazy[1]-1)/3)+3*math.floor((crazy[2]-1)/3)+1 -- Pega o numero do quadrante
+        for l = 1,3 do v = tables[l][crazy[l]] -- 1 = linha, 2 = coluna, 3 = quadrante
+            if v[number] then -- não eliminados nessa coluna/linha/quadrante
+                v[number] = nil    
+            else
+                flag = 1 -- Inválido
+            end
+        end
+    end
+end
+io.write(flag and"Invalid"or"Valid")
