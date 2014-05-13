@@ -16,10 +16,23 @@ moeda xs y = calc xs y 0
             | y >= x = calc (x:xs) (myRound $ y-x) (n+1)
             | otherwise = n : calc xs y 0
 
-myRound :: Double -> Double
-myRound x = (fromInteger $ round $ x * (10^2)) / (10.0^^2)
-
 dropZero :: (Double, Int) -> Bool
 dropZero (_, x)
     | x == 0 = False
     | otherwise = True
+
+myRound :: Double -> Double
+myRound x = (fromInteger $ round $ x * (10^2)) / (10.0^^2)
+
+process :: Double -> Double -> [(Double, Int)]
+process x y =
+    filter dropZero $ zip reais $ moeda reais $ troco x y
+
+main :: IO ()
+main =
+    do
+        putStr "Digite o valor da compra: "
+        vl <- getLine
+        putStr "Digite o valor em dinheiro: "
+        rs <- getLine
+        putStrLn $ show $ process (read vl) (read rs)
