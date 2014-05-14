@@ -3,11 +3,12 @@
 
 import Text.Printf
 
---  Lista com os valores de moeda possiveis no Real.
+--  Lista com os valores de moedas possiveis no Real.
 reais = [100, 50, 20, 10, 5, 2, 1, 0.5, 0.25, 0.1, 0.05]
 
 --  calcula o troco, arredondando o valor final para o cliente não ser roubado
 --  pelo comerciante.
+--  Balinhas no more!!
 troco :: Double -> Double -> Double
 troco valor dinheiro
     | valor >= dinheiro = 0
@@ -16,9 +17,9 @@ troco valor dinheiro
         fx a = if (mod a 5 /= 0) then fx (a+1) else a
 
 --  Retorna uma lista de quantidades de cédulas/moedas necessárias para igualar
---  o valor passado.
---  O valor é passado por cada item da lista 'reais' e sempre que maior, é
---  calculado quantas cédulas/moedas são necessárias para cubrir tal valor.
+--  o valor do troco.
+--  O valor passa por cada item da lista 'reais' e, sempre que maior, é
+--  calculado quantas cédulas/moedas são necessárias para cubrí-lo.
 moeda :: [Double] -> Double -> [Int]
 moeda xs y = calc xs y 0
     where
