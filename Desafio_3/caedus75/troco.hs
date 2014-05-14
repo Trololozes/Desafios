@@ -1,6 +1,8 @@
 --  Copyright (c) 2014
 --  All rights reserved
 
+import Text.Printf
+
 reais = [100, 50, 20, 10, 5, 2, 1, 0.5, 0.25, 0.1, 0.05]
 
 troco :: Double -> Double -> Double
@@ -21,6 +23,11 @@ dropZero (_, x)
     | x == 0 = False
     | otherwise = True
 
+str :: [(Double, Int)] -> [String]
+str xs = map (\(a, b) -> concat [(show b), "x R$ ", (bty a)]) xs
+    where
+        bty a = printf "%.2f" a :: String
+
 myRound :: Double -> Double
 myRound x = (fromInteger $ round $ x * (10^2)) / (10.0^^2)
 
@@ -35,4 +42,4 @@ main =
         vl <- getLine
         putStr "Digite o valor em dinheiro: "
         rs <- getLine
-        putStrLn $ show $ process (read vl) (read rs)
+        putStr $ unlines $ str $ process (read vl) (read rs)
