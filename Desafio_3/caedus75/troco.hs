@@ -8,7 +8,11 @@ reais = [100, 50, 20, 10, 5, 2, 1, 0.5, 0.25, 0.1, 0.05]
 troco :: Double -> Double -> Double
 troco valor dinheiro
     | valor >= dinheiro = 0
-    | otherwise = dinheiro - valor
+    | otherwise = (fromInteger $ fx $ round $ (dinheiro - valor) * 100) / 100
+        where
+            fx a = if (mod a 5 /= 0)
+                then fx (a+1)
+                else a
 
 moeda :: [Double] -> Double -> [Int]
 moeda xs y = calc xs y 0
