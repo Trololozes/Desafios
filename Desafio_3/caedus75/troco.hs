@@ -14,7 +14,7 @@ troco valor dinheiro
     | valor >= dinheiro = 0
     | otherwise = (fromInteger $ fx $ round $ (dinheiro - valor) * 100) / 100
     where
-        fx a = if (mod a 5 /= 0) then fx (a+1) else a
+        fx a = if (mod a 5) /= 0 then fx (a + 1) else a
 
 --  Retorna uma lista de quantidades de cédulas/moedas necessárias para igualar
 --  o valor do troco.
@@ -25,7 +25,7 @@ moeda xs y = calc xs y 0
     where
         calc [] _ _ = []
         calc (x:xs) y n
-            | y >= x = calc (x:xs) (rnd $ y-x) (n+1)
+            | y >= x = calc (x:xs) (rnd $ y - x) (n + 1)
             | otherwise = n : calc xs y 0
         rnd x = (fromInteger $ round $ x * 100) / 100.0
 
@@ -50,10 +50,9 @@ process x y =
 --  Função main.
 --  Faz a interação com o mundo exterior
 main :: IO ()
-main =
-    do
-        putStr "Digite o valor da compra: "
-        vl <- getLine
-        putStr "Digite o valor em dinheiro: "
-        rs <- getLine
-        putStr $ unlines $ str $ process (read vl) (read rs)
+main = do
+    putStrLn "Digite o valor da compra:"
+    vl <- getLine
+    putStrLn "Digite o valor em dinheiro:"
+    rs <- getLine
+    putStr $ unlines $ str $ process (read vl) (read rs)
