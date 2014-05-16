@@ -39,9 +39,9 @@ str xs = map (\(a, b) -> concat [(show b), "x R$ ", (bty a)]) xs
 --  Função 'empacota' todo o processo de calcular o troco, gerar a lista de
 --  quantidades, unir a lista com a lista de valores, e descartar os valores que
 --  não são usados numa coisa só.
-process :: Double -> Double -> [(Double, Int)]
+process :: Double -> Double -> [String]
 process x y =
-    filter dropZero $ zip reais $ moeda reais $ troco x y
+    str $ filter dropZero $ zip reais $ moeda reais $ troco x y
     where
         dropZero (_, x) = if x == 0 then False else True
 
@@ -55,4 +55,4 @@ main = do
     vl <- getLine
     putStr "Digite o valor em dinheiro: "
     rs <- getLine
-    putStr $ unlines $ str $ process (read vl) (read rs)
+    putStr $ unlines $ process (read vl) (read rs)
