@@ -2,6 +2,7 @@
 --  All rights reserved
 
 import Text.Printf
+import System.IO
 
 --  Lista com os valores de moedas possiveis no Real.
 reais = [100, 50, 20, 10, 5, 2, 1, 0.5, 0.25, 0.1, 0.05]
@@ -48,8 +49,10 @@ process x y =
 --  Faz a interação com o mundo exterior
 main :: IO ()
 main = do
-    putStrLn "Digite o valor da compra:"
+    hSetBuffering stdout NoBuffering
+
+    putStr "Digite o valor da compra: "
     vl <- getLine
-    putStrLn "Digite o valor em dinheiro:"
+    putStr "Digite o valor em dinheiro: "
     rs <- getLine
     putStr $ unlines $ str $ process (read vl) (read rs)
