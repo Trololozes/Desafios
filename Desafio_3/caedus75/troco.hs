@@ -30,6 +30,7 @@ moeda (x:xs) y = (truncate $ y / x) : moeda xs (resto x y)
 --  Usa a lista de duplas (Valor, Qtdd) para gerar uma lista de Strings
 --  formatada no modo de apresentação final.
 str :: [(Double, Int)] -> [String]
+str [] = ["Nada a ser feito!", "Tenha um bom dia!"]
 str xs = map (\(a, b) -> concat [(show b), "x R$ ", (bty a)]) xs
     where
         bty a = printf "%.2f" a :: String
