@@ -21,13 +21,11 @@ troco valor dinheiro
 --  O valor passa por cada item da lista 'reais' e, sempre que maior, é
 --  calculado quantas cédulas/moedas são necessárias para cubrí-lo.
 moeda :: [Double] -> Double -> [Int]
-moeda xs y = calc xs y 0
+moeda [] _ = []
+moeda (x:xs) y = (truncate $ y / x) : moeda xs (resto x y)
     where
-        calc [] _ _ = []
-        calc (x:xs) y n
-            | y >= x = calc (x:xs) (rnd $ y - x) (n + 1)
-            | otherwise = n : calc xs y 0
-        rnd x = (fromInteger $ round $ x * 100) / 100.0
+        resto x y = i2d $ rem (round $ y * 100) (round $ x * 100)
+        i2d z = (/) (fromInteger z) 100.0
 
 --  Usa a lista de duplas (Valor, Qtdd) para gerar uma lista de Strings
 --  formatada no modo de apresentação final.
@@ -43,9 +41,7 @@ process :: Double -> Double -> [(Double, Int)]
 process x y =
     filter dropZero $ zip reais $ moeda reais $ troco x y
     where
-        dropZero (_, x)
-            | x == 0 = False
-            | otherwise = True
+        dropZero (_, x) = if x == 0 then False else True
 
 --  Função main.
 --  Faz a interação com o mundo exterior
